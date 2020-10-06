@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/u/0/favicons?domain=yuvinha.com"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+        <!-- Nav Items -->
+      <ul class="nav-items">
+        <a href="../index.html">&lt;</a>
+        <a href="#home">Home</a>
+        <a href="#illustrations">Illustrations</a>
+        <a href="#components">Components</a>
+        <a href="#icons">Icons</a>
+      </ul>
+
+      <!-- Dark Mode Switch -->
+      <div class="theme-switch-wrapper">
+        <span id="toggle-icon">
+          <span class="toggle-text">Light Mode</span>
+          <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+          <input type="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+      <div class="title-group">
+        <h1>Light &amp; Dark Mode</h1>
+        <p>Click the button. Toggle the mode.</p>
+      </div>
+    </section>
+    <!-- Illustrations -->
+    <section id="illustrations">
+      <h2 class="section-title">Illustrations</h2>
+      <div class="image-container">
+        <div class="image-card">
+          <h3>Personal Website</h3>
+          <div class="image">
+            <img
+              src="img/undraw_personal_website_light.svg"
+              alt="Personal Website"
+              id="image1"
+            />
+          </div>
+        </div>
+        <div class="image-card">
+          <h3>Personal Goals</h3>
+          <div class="image">
+            <img
+              src="img/undraw_personal_goals_light.svg"
+              alt="Personal Goals"
+              id="image2"
+            />
+          </div>
+        </div>
+        <div class="image-card">
+          <h3>Personal Setting</h3>
+          <div class="image">
+            <img
+              src="img/undraw_personal_settings_light.svg"
+              alt="Personal Setting"
+              id="image3"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Components -->
+    <section id="components">
+      <h2 class="section-title">Components</h2>
+      <div class="button-container">
+        <button class="primary">Primary</button>
+        <button class="secondary">Secondary</button>
+        <button class="primary" disabled>Disabled</button>
+        <button class="outline">Outline</button>
+        <button class="outline secondary">Alt Outline</button>
+        <button class="outline" disabled>Disabled</button>
+      </div>
+      <div class="text-box" id="text-box">
+        <p>
+          Lorem ipsum dolor amet consectetur adipisicing elit. Voluptatibus
+          magnam sit alias eos ducimus expedita quam, corporis, blanditiis vel
+          facilis, animi adipisci? Nemo enim quisquam maiores minima, qui omnis.
+          Accusamus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Dolorem magnam accusamus qui, ab voluptates reprehenderit rerum quo
+          mollitia libero asperiores doloremque dolores, nihil repellat
+          doloribus perspiciatis magni dolore dolorum ipsam!
+        </p>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="icons">
+      <h2 class="section-title">Icons</h2>
+      <div class="social-icons">
+        <i class="fab fa-github"></i>
+        <i class="fab fa-codepen"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-medium"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </section>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

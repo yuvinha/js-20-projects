@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primaryColor: #fff;
+  --navColor1: #21292c;
+  --navColor2: #42A393;
+  --navColor3: #4E72AA;
+  --navColor4: #FFC866;
+  --navColor5: #FFA466;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background: #000;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* --- Navigation Menu ------------------------------ */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#000, .7);
+  transform: translateX(-100%);
+}
+
+.overlay-slide-in {
+  transform: translateX(0);
+  transition: all .3s ease-in-out;
+}
+
+.overlay-slide-out {
+  transform: translateX(-100%);
+  transition: all .6s ease-in-out;
+}
+ 
+nav {
+  ul {
+    list-style: none;
+    width: 100%;
+    height:100vh;
+  }
+
+  li {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-of-type(1) { background-color: var(--navColor1); }
+    &:nth-of-type(2) { background-color: var(--navColor2); }
+    &:nth-of-type(3) { background-color: var(--navColor3); }
+    &:nth-of-type(4) { background-color: var(--navColor4); }
+    &:nth-of-type(5) { background-color: var(--navColor5); }
+  }
+
+  a {
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+    transition: all .2s;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background-color: currentColor;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-100%);
+      transition: all .3s;
+      transition-delay: .2s;
+    }
+
+    &:hover {
+      font-weight: 700;
+      transform: scale(1.1);
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//Nav Items Animation
+.slide-in {
+  &-1 { animation: slideIn .3s ease-in-out .2s both; } 
+  &-2 { animation: slideIn .3s ease-in-out .4s both; } 
+  &-3 { animation: slideIn .3s ease-in-out .6s both; } 
+  &-4 { animation: slideIn .3s ease-in-out .8s both; } 
+  &-5 { animation: slideIn .3s ease-in-out 1s both; } 
+}
+
+.slide-out {
+  &-1 { animation: slideOut .3s ease-in-out .5s both; } 
+  &-2 { animation: slideOut .3s ease-in-out .4s both; } 
+  &-3 { animation: slideOut .3s ease-in-out .3s both; } 
+  &-4 { animation: slideOut .3s ease-in-out .2s both; } 
+  &-5 { animation: slideOut .3s ease-in-out .1s both; } 
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* --- Menu Bars ------------------------------------ */
+
+.menu-bars {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 100;
+  display: inline;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  margin: 8px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* --- Sections ------------------------------------ */
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primaryColor);
+
+  h1 { font-size: 2.4rem; }
+}
+
+section#home {
+  background-image: url("https://images.unsplash.com/photo-1594614271360-0ed9a570ae15?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80");
+  background-size: cover;
+  background-position: center center;
+}
+
+section#home a {
+  position: absolute;
+  z-index: 2;
+  top: 3rem;
+  left: 3rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  color: var(--primaryColor);
+  border-bottom: 1px solid var(--primaryColor);
+}
+
+section#home .title-container {
+  text-align: center;
+  text-shadow: 0 .3rem 1.5rem rgba(#000, .15);
+
+  h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+section#about {
+  background-color: var(--navColor2);
+}
+
+section#skills {
+  background-color: var(--navColor3);
+}
+
+section#projects {
+  background-color: var(--navColor4);
+}
+
+section#contact {
+  background-color: var(--navColor5);
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media (max-width: 600px) {
+  section#home a {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .menu-bars {
+    top: 0.5rem;
+    right: 1rem;
+  }
+}

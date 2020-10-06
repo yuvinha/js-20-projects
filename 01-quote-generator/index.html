@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=yuvinha.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html">&lt; Back to Home</a>
+    </nav>
+
+    <div class="container" hidden>
+        <div class="quote-container">
+            <!-- Quote Text -->
+            <div class="quote-text">
+                <i class="quote-icon fas fa-quote-left"></i>
+                <span id="quote"></span>
+            </div>
+            <!-- Author -->
+            <div class="quote-author">
+                <span id="author"></span> 
+            </div>
+        </div>
+        <!-- Buttons -->
+        <div class="button-container">
+            <button class="btn btn--twitter" title="Tweet This!">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="btn btn--new">
+                New Quote
+            </button>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

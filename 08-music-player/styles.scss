@@ -1,0 +1,146 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+
+$gray-1: #33334f;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #9796f0, #fbc7d4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-family: "Spartan", sans-serif;
+  line-height: 1.7;
+  color: $gray-1;
+}
+
+/* Player */
+.player-container {
+  width: 40rem;
+  background: rgba(#fafafa, 0.9);
+  border-radius: 2.5rem;
+  box-shadow: 0 1rem 3rem 0.5rem rgba(#000, 0.2);
+}
+
+.image-container {
+  position: relative;
+  top: -5rem;
+  left: 5rem;
+  width: 30rem;
+  height: 30rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(#000, 0.2), 0 0.2rem 0.5rem rgba(#000, 0.2);
+  border-radius: 2.5rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.text-container {
+  text-align: center;
+  margin-top: -2.5rem;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 2.1rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+/* Progress */
+.progress-container {
+  cursor: pointer;
+  background: #eee;
+  margin: 3.5rem auto 3rem auto;
+  height: 0.5rem;
+  width: 85%;
+  border-radius: 1rem;
+  box-shadow: inset 1px 1px 3px rgba(#000, 0.15);
+}
+
+.progress {
+  background: rgba($gray-1, 0.8);
+  border-radius: 1rem;
+  height: 100%;
+  /* change this to show progress */
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -2.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: rgba($gray-1, 0.8);
+}
+
+/* Controls */
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.fas {
+  cursor: pointer;
+  user-select: none;
+  font-size: 2.6rem;
+  color: rgba($gray-1, 0.6);
+  transition: all .2s;
+
+  &:not(:last-of-type) {
+    margin-right: 3rem;
+  }
+
+  &:hover {
+    color: rgba($gray-1, 0.8);
+  }
+}
+
+.main-button {
+  font-size: 3.4rem;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 25em) {
+  .player-container {
+    width: 95vw;
+  }
+
+  .image-container {
+    width: 75vw;
+    height: 75vw;
+    left: 0;
+    margin: auto;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}

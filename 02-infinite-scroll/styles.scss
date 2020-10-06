@@ -1,0 +1,124 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+// VARIABLES
+$primary-color: #F44336;
+
+// BASE 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 16 * .625 = 10 px
+
+    @media screen and (max-width: 37.5em) {
+        font-size: 50%;
+    }
+};
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+// NAVIGATION
+nav {
+    position: fixed;
+    top: 2rem;
+    left: 3rem;
+    z-index: 1000;
+
+    a { 
+        display: inline-block;
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #666;
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: currentColor;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            filter: brightness(50%);
+            &::after { width: 100%; } 
+        }
+    }
+}
+
+// Header 
+header {
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $primary-color;
+}
+
+.sub-title {
+    margin-top: -5px;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+    color: #666;
+}
+
+// Loader 
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#fff, .9);
+
+    img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// Image Container
+.image-container {
+    margin: 0 25%;
+
+    @media screen and (max-width: 37.5em) {
+        margin: 1rem;
+    }
+
+    a {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}

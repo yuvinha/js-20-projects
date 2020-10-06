@@ -1,0 +1,131 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+// VARIABLES
+$color-primary: #45BADD;
+
+// BASE
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 16 * .625 = 10 px
+};
+
+body {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #333;
+    background-color: $color-primary;
+}
+
+// NAVIGATION
+nav {
+    position: fixed;
+    top: 2rem;
+    left: 3rem;
+    z-index: 1000;
+
+    a { 
+        display: inline-block;
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #eee;
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: currentColor;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: #fff;
+            &::after { width: 100%; } 
+        }
+    }
+}
+
+// HEADER
+header {
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+
+    h1 { font-size: 3.2rem; }
+    p { 
+        font-size: 1.6rem;
+    }
+}
+
+// CONTAINER 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url('./robot.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center calc(50% + 5rem);
+
+    @media screen and (max-width: 50em) {
+        background-size: cover;
+    }
+}
+
+// BUTTON
+.btn {
+    cursor: pointer;
+    display: block;
+    margin-top: 5rem;
+    padding: 1.4rem 2.8rem;
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 3px;
+    background-color: #fff;
+    
+    color: $color-primary;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    box-shadow: 0 .5rem 1.5rem .5rem rgba(#000, .25);
+    transition: all .2s;
+
+    &:hover {
+        color: #fff;
+        border: 2px solid #fff;
+        background-color: darken($color-primary, 10%);
+    }
+
+    &:active {
+        transform: translateY(2px) scale(.98);
+    }
+
+    &:disabled {
+        cursor: default;
+        color: #bdbdbd;
+        border: 2px solid transparent;
+        background-color: #fff;
+    }
+}

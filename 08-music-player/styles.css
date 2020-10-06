@@ -1,0 +1,170 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#9796f0), to(#fbc7d4));
+  background-image: linear-gradient(to right bottom, #9796f0, #fbc7d4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  font-family: "Spartan", sans-serif;
+  line-height: 1.7;
+  color: #33334f;
+}
+
+/* Player */
+.player-container {
+  width: 40rem;
+  background: rgba(250, 250, 250, 0.9);
+  border-radius: 2.5rem;
+  -webkit-box-shadow: 0 1rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  position: relative;
+  top: -5rem;
+  left: 5rem;
+  width: 30rem;
+  height: 30rem;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2), 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2), 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text-container {
+  text-align: center;
+  margin-top: -2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-container h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.text-container h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Progress */
+.progress-container {
+  cursor: pointer;
+  background: #eee;
+  margin: 3.5rem auto 3rem auto;
+  height: 0.5rem;
+  width: 85%;
+  border-radius: 1rem;
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.progress {
+  background: rgba(51, 51, 79, 0.8);
+  border-radius: 1rem;
+  height: 100%;
+  /* change this to show progress */
+  width: 0%;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.1rem;
+  color: rgba(51, 51, 79, 0.8);
+}
+
+/* Controls */
+.player-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.fas {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 2.6rem;
+  color: rgba(51, 51, 79, 0.6);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.fas:not(:last-of-type) {
+  margin-right: 3rem;
+}
+
+.fas:hover {
+  color: rgba(51, 51, 79, 0.8);
+}
+
+.main-button {
+  font-size: 3.4rem;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 25em) {
+  .player-container {
+    width: 95vw;
+  }
+  .image-container {
+    width: 75vw;
+    height: 75vw;
+    left: 0;
+    margin: auto;
+  }
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
