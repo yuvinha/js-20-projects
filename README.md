@@ -1,6 +1,8 @@
 # JavaScript Web Projects
 Course projects for the Andrei Neagoie and Jacinto  Wong's [JavaScript Web Projects: 20 Projects to Build Your Portfolio](https://www.udemy.com/course/javascript-web-projects-to-build-your-portfolio-resume/) course on Udemy
-> Status: In Progress
+
+- Course Info: 232 lectures, 32h 45m videos
+- Progress: 40% completed
 
 ## Apps
 View live here :point_right:  https://js-20-projects.netlify.app/
